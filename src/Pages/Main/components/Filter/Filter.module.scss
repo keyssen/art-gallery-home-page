@@ -1,15 +1,19 @@
-.filter {
-  display: flex;
+.Filter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2%;
+  margin: 1.09% 1.09% 0 1.09%;
 }
 @media (max-width: 319px) {
-  .filter {
-    flex-direction: column;
+  .Filter {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
   }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-  .filter {
-    display: grid;
+  .Filter {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
   }
 }

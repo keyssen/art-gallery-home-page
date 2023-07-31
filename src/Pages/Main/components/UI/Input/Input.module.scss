@@ -2,21 +2,18 @@ $dark-color: rgb(0, 0, 0);
 $white-color: rgb(255, 255, 255);
 $dark-dark-gray-color: rgba(12, 12, 12);
 
-.input__name {
+.Input {
   height: 2.76rem;
   min-width: 22.82%;
   padding: 0 0 0 1rem;
-  margin: 1.09% 1.09% 0 1.09%;
   border-radius: 0.47rem;
-}
-
-.dark {
-  background-color: $dark-dark-gray-color;
-  color: $white-color;
-  border: 1px solid $white-color;
-}
-
-.light {
-  background-color: $white-color;
-  border: 1px solid $dark-color;
+  &--light {
+    background-color: $white-color;
+    border: 1px solid $dark-color;
+  }
+  &--dark {
+    background-color: $dark-dark-gray-color;
+    color: $white-color;
+    border: 1px solid $white-color;
+  }
 }

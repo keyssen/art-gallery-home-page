@@ -1,7 +1,7 @@
 import React, { FC, memo, useContext } from 'react';
 import cn from 'classnames/bind';
 import Input from '../UI/Input/Input';
-import SelectForInput from '../UI/Selects/SelectForInput/SelectForInput';
+import DropoutsInput from '../UI/Selects/DropoutsInput/DropoutsInput';
 import Select from '../UI/Selects/Select/Select';
 import styles from './Filter.module.scss';
 import { IOption } from '../../Types/types';
@@ -30,7 +30,7 @@ const Filter: FC<IFilter> = memo(({ authors, locations }) => {
   } = useContext(FilterContext);
 
   return (
-    <div className={cx('filter')}>
+    <div className={cx('Filter')}>
       <Input
         isLightTheme={isLightTheme}
         placeholder="Name"
@@ -52,7 +52,7 @@ const Filter: FC<IFilter> = memo(({ authors, locations }) => {
         defaultValue="Location"
         options={locations}
       />
-      <SelectForInput
+      <DropoutsInput
         isLightTheme={isLightTheme}
         value={dateValue}
         setValue={setDateValue}

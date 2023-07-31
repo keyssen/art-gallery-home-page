@@ -1,29 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-.page {
+.Main {
   max-width: 100%;
   padding-top: 35px;
   padding-left: 3.125vw;
   padding-right: 3.125vw;
-  margin: 0 auto;
   min-height: 100vh;
-}
-
-.page__light {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
-
-.page__dark {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  &--light {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  &--dark {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
 }
 
 ::-webkit-scrollbar-thumb {
@@ -41,35 +38,35 @@
 }
 
 @media (max-width: 319px) {
-  .page {
+  .Main {
     padding-left: 3.125vw;
     padding-right: 3.125vw;
   }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
-  .page {
+  .Main {
     padding-left: 3.125vw;
     padding-right: 3.125vw;
   }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-  .page {
+  .Main {
     padding-left: 2.8571428571vw;
     padding-right: 2.8571428571vw;
   }
 }
 
 @media (max-width: 1365px) and (min-width: 1024px) {
-  .page {
+  .Main {
     padding-left: 3.125vw;
     padding-right: 3.125vw;
   }
 }
 
 @media (min-width: 1366px) {
-  .page {
+  .Main {
     padding-left: 8.3333333333vw;
     padding-right: 8.3333333333vw;
   }

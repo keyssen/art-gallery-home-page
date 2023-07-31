@@ -73,9 +73,9 @@ const Main = () => {
 
   return (
     <div
-      className={cx('page', {
-        page__light: isLightTheme,
-        page__dark: !isLightTheme
+      className={cx('Main', {
+        'Main--light': isLightTheme,
+        'Main--dark': !isLightTheme
       })}
     >
       <Header />

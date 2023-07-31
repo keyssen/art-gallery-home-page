@@ -15,9 +15,9 @@ interface IInputProps {
 const Input: FC<IInputProps> = memo(
   ({ value, setValue, placeholder, maxLength, isLightTheme }) => (
     <input
-      className={cx('input__name', {
-        light: isLightTheme,
-        dark: !isLightTheme
+      className={cx('Input', {
+        'Input--light': isLightTheme,
+        'Input--dark': !isLightTheme
       })}
       value={value}
       onChange={(event) => setValue(event.target.value)}

@@ -1,18 +1,15 @@
-
-.page__svg {
+.Header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .page__svg__logo {
+  &__logo {
     width: 64px;
     height: 64px;
     margin-bottom: 24px;
     margin-left: 1.09%;
   }
-  .page__svg__switch {
+  &__switch {
     margin-right: 1.09%;
-  }
-  .svg {
     cursor: pointer;
   }
 }

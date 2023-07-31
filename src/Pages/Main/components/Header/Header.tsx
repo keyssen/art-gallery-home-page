@@ -10,14 +10,14 @@ const cx = cn.bind(styles);
 const Header = memo(() => {
   const { isLightTheme, setIsThemeLight } = useContext(ThemeContext);
   return (
-    <div className={cx('page__svg')}>
+    <div className={cx('Header')}>
       <img
         src={logo}
-        className={cx('page__svg__logo')}
+        className={cx('Header__logo')}
         alt="Framework Team Logo"
       />
       <Sun
-        className={cx('page__svg__switch', 'svg')}
+        className={cx('Header__switch', 'svg')}
         onClick={() => setIsThemeLight(!isLightTheme)}
       />
     </div>
