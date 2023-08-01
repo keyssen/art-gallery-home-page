@@ -7,12 +7,12 @@ import Pagination from './components/Pagination/Pagination';
 import Filter from './components/Filter/Filter';
 import { useReplaceFieldsIdInPaintings } from './hooks/useReplaceFieldsIdInPaintings';
 import QueryService from './API/QueryService';
-import { getPageCount } from './components/utils/pages';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import Header from './components/Header/Header';
 import { IOption, IPainting } from './Types/types';
 import { useFetching } from './hooks/useFetching';
 import { FilterContext } from '../../providers/FilterProvider';
+import { getPageCount } from './utils/pages';
 
 const cx = cn.bind(styles);
 
