@@ -7,17 +7,15 @@ $button-page-dark-collor: rgba(70, 70, 70);
 $button-pages-light-collor: rgba(237, 237, 237);
 
 .Pagination {
-  padding: 40px 1.09% 40px 1.09%;
   display: flex;
-
   &__angle {
     min-height: 40px;
     min-width: 40px;
-    &--double_left {
+    &--double-left {
       border-bottom-left-radius: 7px;
       border-top-left-radius: 7px;
     }
-    &--double_right {
+    &--double-right {
       border-bottom-right-radius: 7px;
       border-top-right-radius: 7px;
     }
@@ -29,12 +27,12 @@ $button-pages-light-collor: rgba(237, 237, 237);
     font-size: 18px;
     font-weight: 500;
     line-height: 20px;
-    &__light {
+    &--light {
       background-color: $white-color;
       color: $dark-color;
       border: 1px solid $dark-color;
     }
-    &__dark {
+    &--dark {
       background-color: $dark-color;
       color: $white-color;
       border: 1px solid $white-color;
@@ -43,23 +41,23 @@ $button-pages-light-collor: rgba(237, 237, 237);
 }
 
 button.Pagination__page {
-  &.Pagination__page__light:disabled {
+  &.Pagination__page--light:disabled {
     background-color: $dark-color;
     color: $white-color;
   }
-  &.Pagination__page__dark:disabled {
+  &.Pagination__page--dark:disabled {
     background-color: $white-color;
     color: $dark-color;
   }
 }
 
-button.Pagination__page__light:hover:not([disabled]) {
+button.Pagination__page--light:hover:not([disabled]) {
   background-color: $button-pages-light-collor;
   color: $dark-color;
   cursor: pointer;
 }
 
-button.Pagination__page__dark:hover:not([disabled]) {
+button.Pagination__page--dark:hover:not([disabled]) {
   background-color: $button-page-dark-collor;
   color: $white-color;
   cursor: pointer;
@@ -71,10 +69,10 @@ button.Pagination__page__dark:hover:not([disabled]) {
     color: $white-color;
     cursor: pointer;
   }
-  &.Pagination__page__dark:disabled {
+  &.Pagination__page--dark:disabled {
     color: $gray-color;
   }
-  &.Pagination__page__light:disabled {
+  &.Pagination__page--light:disabled {
     color: $button-pages-light-collor;
     border: 1px solid $button-pages-light-collor;
   }

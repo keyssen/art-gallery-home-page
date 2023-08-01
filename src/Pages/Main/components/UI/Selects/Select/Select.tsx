@@ -62,7 +62,7 @@ const Select: FC<ISelectProps> = memo(
           <div className={cx('Select__buttonIcons')}>
             {value ? (
               <Cross
-                className={cx('Select__button-close')}
+                className={cx('Select__buttonIcons-close')}
                 onClick={() => {
                   setSelected('');
                   setValue(0);
@@ -73,7 +73,7 @@ const Select: FC<ISelectProps> = memo(
             )}
             <SelectTriange
               isActive={isActive}
-              className={cx('Select__button-open')}
+              className={cx('Select__buttonIcons-open')}
               selectRef={selectRef}
               isScrollerAtBottom={isScrollerAtBottom}
             />
@@ -82,14 +82,14 @@ const Select: FC<ISelectProps> = memo(
         {isActive && (
           <div
             className={cx('Select__container', {
-              'container--light': isLightTheme,
-              'container--dark': !isLightTheme
+              'Select__container--light': isLightTheme,
+              'Select__container--dark': !isLightTheme
             })}
           >
             <div
-              className={cx('dividingLine', {
-                'dividingLine--light': isLightTheme,
-                'dividingLine--dark': !isLightTheme
+              className={cx('Select__dividingLine', {
+                'Select__dividingLine--light': isLightTheme,
+                'Select__dividingLine--dark': !isLightTheme
               })}
             />
             <div

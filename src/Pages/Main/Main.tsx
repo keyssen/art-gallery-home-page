@@ -78,15 +78,24 @@ const Main = () => {
         'Main--dark': !isLightTheme
       })}
     >
-      <Header />
-      <Filter authors={authors} locations={locations} />
+      <Header className={styles.Main__Header} />
+      <Filter
+        className={styles.Main__Filter}
+        authors={authors}
+        locations={locations}
+      />
       {paintingError ? (
         <div>{paintingError}</div>
       ) : (
-        <PaintingList paintings={newPaintings} isLoaded={isLoaded} />
+        <PaintingList
+          className={styles.Main__PaintingList}
+          paintings={newPaintings}
+          isLoaded={isLoaded}
+        />
       )}
       {newPaintings.length !== 0 && (
         <Pagination
+          className={styles.Main__Pagination}
           currentPage={currentPage}
           totalPages={totalPages}
           setCurrentPage={setCurrentPage}

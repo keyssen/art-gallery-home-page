@@ -10,12 +10,13 @@ import { FilterContext } from '../../../../providers/FilterProvider';
 
 const cx = cn.bind(styles);
 
-interface IFilter {
+interface IFilterProps {
   authors: IOption[];
   locations: IOption[];
+  className: string;
 }
 
-const Filter: FC<IFilter> = memo(({ authors, locations }) => {
+const Filter: FC<IFilterProps> = memo(({ authors, locations, className }) => {
   const { isLightTheme } = useContext(ThemeContext);
 
   const {
@@ -30,7 +31,7 @@ const Filter: FC<IFilter> = memo(({ authors, locations }) => {
   } = useContext(FilterContext);
 
   return (
-    <div className={cx('Filter')}>
+    <div className={cx('Filter', className)}>
       <Input
         isLightTheme={isLightTheme}
         placeholder="Name"

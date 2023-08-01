@@ -9,14 +9,6 @@ $dark-gray-color: rgba(0, 0, 0, 0.3);
 .Select {
   position: relative;
   min-width: 22.82%;
-  .container--light {
-    background-color: $white-color;
-    border: 1px solid $dark-color;
-  }
-  .container--dark {
-    background-color: $dark-dark-gray-color;
-    border: 1px solid $white-color;
-  }
   &__container {
     position: absolute;
     width: 100%;
@@ -24,6 +16,14 @@ $dark-gray-color: rgba(0, 0, 0, 0.3);
     border-bottom-left-radius: 0.47rem;
     border-bottom-right-radius: 0.47rem;
     border-top: none;
+    &--dark {
+      background-color: $dark-dark-gray-color;
+      border: 1px solid $white-color;
+    }
+    &--light {
+      background-color: $white-color;
+      border: 1px solid $dark-color;
+    }
   }
   &__content {
     max-height: 21.1rem;
@@ -82,15 +82,15 @@ $dark-gray-color: rgba(0, 0, 0, 0.3);
       font-size: 13px;
     }
   }
-  &__button-close {
-    margin-right: 0.6rem;
-  }
-  &__button-open {
-    padding-bottom: 2px;
-  }
   &__buttonIcons {
     display: flex;
     align-items: center;
+    &-open {
+      padding-bottom: 2px;
+    }
+    &-close {
+      margin-right: 0.6rem;
+    }
   }
   &__dividingLine {
     height: 1px;

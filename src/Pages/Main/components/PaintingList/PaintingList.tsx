@@ -7,20 +7,23 @@ import { IViewPainting } from '../../Types/types';
 const cx = cn.bind(styles);
 
 interface IPaintingListProps {
+  className: string;
   paintings: IViewPainting[];
   isLoaded: boolean;
 }
 
-const PaintingList: FC<IPaintingListProps> = memo(({ paintings, isLoaded }) => (
-  <div
-    className={cx('catalog', {
-      paintingsLoaded: isLoaded
-    })}
-  >
-    {paintings.map((painting) => (
-      <Painting painting={painting} key={painting.id} />
-    ))}
-  </div>
-));
+const PaintingList: FC<IPaintingListProps> = memo(
+  ({ className, paintings, isLoaded }) => (
+    <div
+      className={cx('PaintingList', className, {
+        'PaintingList--loaded': isLoaded
+      })}
+    >
+      {paintings.map((painting) => (
+        <Painting painting={painting} key={painting.id} />
+      ))}
+    </div>
+  )
+);
 
 export default PaintingList;

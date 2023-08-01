@@ -1,91 +1,51 @@
 $dark-color: rgb(0, 0, 0);
 $white-gray-color: rgba(255, 255, 255, 0.75);
 
-.catalog__painting {
+.Painting {
 	display: inline-block;
 	overflow: hidden;
 	border-radius: 1.25rem;
 	position: relative;
 	width: 100%;
 	padding-bottom: 68.4%;
-	margin: 1.09%;
 	cursor: pointer;
-}
-
-.catalog__painting__img {
-	pointer-events: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-}
-
-.catalog__painting__overlay {
-	position: absolute;
-	bottom: -5rem;
-	left: 0;
-	width: 100%;
-	background-color: rgba(255, 255, 255, 0.75);
-	color: $dark-color;
-	padding: 0.3rem 0.1rem 1.3rem 0.9rem;;
-	font-size: 13px;
-	line-height: 20px;
-	p {
-		white-space: nowrap;
-		font-weight: 300;
-		span {
+	&__img {
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+	}
+	&__overlay {
+		position: absolute;
+		bottom: -5rem;
+		left: 0;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.75);
+		color: $dark-color;
+		padding: 0.3rem 0.1rem 1.3rem 0.9rem;;
+		font-size: 13px;
+		line-height: 20px;
+		&-paragraph {
+			white-space: nowrap;
+			font-weight: 300;
+		}
+		&-span {
 			font-weight: 500;
 		}
 	}
-
-	.painting__name {
+	&__name {
 		font-size: 18px;
 		font-weight: 700;
 		line-height: 20px;
 		text-transform: capitalize;
 		padding-bottom: 4px;
 	}
-}
-
-.catalog__painting:hover .catalog__painting__overlay {
-	bottom: 0;
-	transition: all 0.2s ease-out;
-	p {
-		white-space: initial;
-	}
-}
-
-@media (max-width: 319px) {
-	.catalog__painting {
-		width: 100%;
-		padding-bottom: 68.4%;
-	}
-}
-
-@media (max-width: 767px) and (min-width: 320px) {
-	.catalog__painting {
-		width: 100%;
-		padding-bottom: 68.4%;
-	}
-}
-
-@media (max-width: 1023px) and (min-width: 768px) {
-	.catalog__painting {
-		width: 47.8%;
-		padding-bottom: 34.4%;
-	}
-}
-
-@media (max-width: 1365px) and (min-width: 1024px) {
-	.catalog__painting {
-		width: 31.14%;
-		padding-bottom: 24%;
-	}
-}
-
-@media (min-width: 1366px) {
-	.catalog__painting {
-		width: 31.15%;
-		padding-bottom: 24%;
+	&:hover .Painting__overlay {
+		bottom: 0;
+		transition: all 0.2s ease-out;
+		p {
+			white-space: initial;
+		}
 	}
 }
